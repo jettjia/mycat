@@ -29,17 +29,3 @@
 集群基于ZooKeeper管理，在线升级，扩容，智能优化，大数据处理（2.0开发版）
 ========================== 分割线 ========================================
 这里基于mycat，keepalived, haproxy,zookeeper,mysql 实践了高可用的一套电商方案（实现了基本的操作，具体的读者可自行扩展）
-
-app 		app 		app
-			 |
-			 |		
---------------------------------
-		  keepalived
-haproxy<---------------->haproxy
-	|	   zookeeper      |
-mycat<------------------>mycat
-|							|
---------------------------------
-order01		orderN	user	goods
----------------------------------
-order01slave,orderNslave,userslave,goodsslave
